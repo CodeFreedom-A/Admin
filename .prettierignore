@@ -1,0 +1,16 @@
+dist/*
+public/**/*
+.local
+.output.js
+node_modules
+
+**/*.svg
+**/*.sh
+
+.husky
+public
+index.html
+.history
+package-lock.json
+
+**/export.js

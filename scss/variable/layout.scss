@@ -1,0 +1,9 @@
+:root {
+    --header-height: 51px;
+    --main-toolbar-height: 36px;
+    --footer-height: 24px;
+}
+
+$header-height: var(--header-height);
+$main-toolbar-height: var(--main-toolbar-height);
+$footer-height: var(--footer-height);

@@ -1,0 +1,22 @@
+{
+    "cSpell.words": ["browserslist", "commitlint", "Parens", "pinia", "unplugin", "vitejs", "Vnode"],
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[JSX]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[TSX]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}
