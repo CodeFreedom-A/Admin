@@ -10,5 +10,6 @@ declare module "@vue/runtime-core" {
         DataPanel: typeof import("./src/components/ToolPanels/DataPanel/DataPanel.vue")["default"];
         Draggable: typeof import("./src/components/Draggable/Draggable.vue")["default"];
         Loading: typeof import("./src/components/Loading.vue")["default"];
+        Sunbutton: typeof import("./src/components/Sunbutton/index.vue")["default"];
     }
 }
