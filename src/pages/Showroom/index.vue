@@ -2,7 +2,7 @@
  * @Author: sunheng
  * @Date: 2022-12-03 15:17:51
  * @LastEditors: sunheng
- * @LastEditTime: 2022-12-03 15:26:41
+ * @LastEditTime: 2022-12-03 15:36:56
  * @Description: 请填写简介
 -->
 <script setup lang="ts">
@@ -15,8 +15,7 @@
     const handleClick = e => {
         console.log(e);
 
-        if (e.target.nativeObject3d.name == "前脸") careFace.value = e.target.nativeObject3d;
-        console.log(careFace.value, "careFace");
+        if (carplace.includes(e.target.nativeObject3d.name)) careFace.value = e.target.outerObject3d;
     };
     const selectColor = index => {
         // console.log(index);
@@ -29,7 +28,7 @@
         <div class="home-content-title">
             <h1>汽车展示与选配</h1>
         </div>
-        <h2>选择车身颜色</h2>
+        <h2>点击车的鼻孔更换颜色</h2>
         <div class="select">
             <div class="select-item" v-for="(item, index) in colors" :key="index" @click="selectColor(index)">
                 <div class="select-item-color" :style="{ backgroundColor: item }" />
