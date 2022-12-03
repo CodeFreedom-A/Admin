@@ -2,12 +2,13 @@
  * @Author: sunheng
  * @Date: 2022-12-03 15:17:51
  * @LastEditors: sunheng
- * @LastEditTime: 2022-12-03 15:36:56
- * @Description: 请填写简介
+ * @LastEditTime: 2022-12-03 15:51:08
+ * @Description: lingo3d
 -->
 <script setup lang="ts">
-    import { World, Model, PointLight, OrbitCamera, Find } from "lingo3d-vue";
-    import { ref } from "vue";
+    import LoadingVue from "@/components/Loading.vue";
+    import { World, Model, PointLight, OrbitCamera, Find, usePreload } from "lingo3d-vue";
+    import { ref, onMounted, watch } from "vue";
     // 定义数组
     let careFace = ref({});
     let carplace = ["前脸", "前轮毂", "后轮毂", "车身", "挡风玻璃", "引擎盖"];
@@ -21,9 +22,34 @@
         // console.log(index);
         careFace.value.material.color.set(colors[index]);
     };
+    // LoadingVue
+    let progress = ref(0);
+    let Loading = ref(false);
+    onMounted(() => {
+        progress.value = usePreload(["bmw.glb"], "4.09mb");
+        // 监听鼠标
+    });
+    watch(
+        () => progress.value,
+        newValue => {
+            if (newValue.value < 100) {
+                console.log(progress);
+
+                Loading.value = false;
+            } else {
+                Loading.value = true;
+                console.log(progress);
+            }
+        },
+        {
+            immediate: true,
+            deep: true
+        }
+    );
 </script>
 
 <template>
+    <LoadingVue class="loading" v-if="!Loading" />
     <div class="home-content">
         <div class="home-content-title">
             <h1>汽车展示与选配</h1>
@@ -64,6 +90,7 @@
         right: 20px;
         z-index: 9999;
         color: #fff;
+        user-select: none;
     }
 
     .select-item-color {
@@ -77,5 +104,13 @@
     }
     .select {
         display: flex;
+    }
+    .loading {
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        position: absolute;
+        z-index: 99999;
+        user-select: none;
     }
 </style>
