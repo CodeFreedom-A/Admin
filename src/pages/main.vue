@@ -1,17 +1,19 @@
 <!--
  * @Author: sunheng
- * @Date: 2022-11-17 14:57:21
+ * @Date: 2022-12-03 12:47:34
  * @LastEditors: sunheng
- * @LastEditTime: 2022-12-03 13:10:01
+ * @LastEditTime: 2022-12-03 12:47:34
  * @Description: 请填写简介
 -->
 <template>
     <div class="Container">
-        <router-view />
+        <sun-button />
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    import SunButton from "../components/Sunbutton/index.vue";
+</script>
 
 <style lang="scss">
     .Container {

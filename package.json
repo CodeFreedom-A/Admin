@@ -16,10 +16,12 @@
         "diffCached": "git diff --cached"
     },
     "dependencies": {
+        "lingo3d-vue": "^1.34.4",
         "moveable": "^0.36.1",
         "pinia": "^2.0.22",
         "unplugin-vue-components": "^0.22.7",
-        "vue": "^3.2.39"
+        "vue": "^3.2.39",
+        "vue-router": "^4.1.6"
     },
     "devDependencies": {
         "@arco-design/web-vue": "^2.37.3",
