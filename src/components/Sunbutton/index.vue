@@ -2,13 +2,21 @@
  * @Author: sunheng
  * @Date: 2022-12-03 11:40:16
  * @LastEditors: sunheng
- * @LastEditTime: 2022-12-03 12:15:39
+ * @LastEditTime: 2022-12-03 15:56:36
  * @Description: 请填写简介
 -->
+<script setup lang="ts">
+    import { useRouter } from "vue-router";
+    const router = useRouter();
 
-<script setup lang="ts"></script>
+    const handleClick = () => {
+        router.push({
+            name: "Showroom"
+        });
+    };
+</script>
 <template>
-    <div class="sun_button">
+    <div class="sun_button" @click="handleClick">
         <div> 点击进入 </div>
     </div>
 </template>
