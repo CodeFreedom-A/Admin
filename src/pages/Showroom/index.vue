@@ -2,7 +2,7 @@
  * @Author: sunheng
  * @Date: 2022-12-03 15:17:51
  * @LastEditors: sunheng
- * @LastEditTime: 2022-12-03 15:51:08
+ * @LastEditTime: 2022-12-03 15:53:48
  * @Description: lingo3d
 -->
 <script setup lang="ts">
@@ -54,7 +54,7 @@
         <div class="home-content-title">
             <h1>汽车展示与选配</h1>
         </div>
-        <h2>点击车的鼻孔更换颜色</h2>
+        <h2>点击车的鼻孔下方更换颜色</h2>
         <div class="select">
             <div class="select-item" v-for="(item, index) in colors" :key="index" @click="selectColor(index)">
                 <div class="select-item-color" :style="{ backgroundColor: item }" />
